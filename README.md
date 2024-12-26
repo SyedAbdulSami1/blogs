@@ -36,27 +36,27 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 <br/>
-1. Create folder in lower case  <br/>
+1. Create folder in lower case  <br/> <br/>
 2. Generate Next js file<br/>
 npx create-next-app@14 .<br/>
-add " ." for not create a project folder<br/>
+add " ." for not create a project folder<br/> <br/>
 3. Install Github CLI <br/>
-https://cli.github.com/ <br/>
+https://cli.github.com/ <br/> <br/>
 4. GitHub CLI Login <br/>
-gh auth login <br/>
+gh auth login <br/> <br/>
 5. Rename Local Branch <br/>
-git branch -m master main <br/>
+git branch -m master main <br/> <br/>
 6. create repo <br/>
 git init <br/>
 git add . <br/>
 git commit -m "Initial commit" <br/>
-gh repo create <br/>
-7. git push -u origin main <br/>
-8. diploy on vercel <br/>
+gh repo create <br/> <br/>
+7. git push -u origin main <br/> <br/>
+8. diploy on vercel <br/> <br/>
 9. install shad cn and Button <br/>
 npx shadcn@latest init <br/>
-npx shadcn@latest add button <br/>
-10. push on github <br/>
-11. Run 3 comand for sanity <br/>
+npx shadcn@latest add button <br/> <br/>
+10. push on github <br/> <br/>
+11. Run 3 comand for sanity <br/> <br/>
 npm i sanity next-sanity @sanity/vision <br/>
 12. push on github <br/>
