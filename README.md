@@ -60,3 +60,89 @@ npx shadcn@latest add button <br/> <br/>
 11. Run 3 comand for sanity <br/> <br/>
 npm i sanity next-sanity @sanity/vision <br/>
 12. push on github <br/>
+13. class-14-new/src/sanity/sanity.client.ts
+ import { createClient, type ClientConfig } from "next-sanity";
+
+const SanityClient: ClientConfig = {
+    projectId: "kn4xk1pb",
+    dataset: "production",
+    apiVersion: "2024-12-22",
+    useCdn: false
+}
+
+export default createClient(SanityClient);
+14. class-14-new/src/sanity/sanity.config.ts
+    import { defineConfig } from "sanity";
+import { structureTool } from "sanity/structure";
+import { visionTool } from "@sanity/vision";
+import { schemaTypes } from "./schema";
+
+export const SanityConfig = defineConfig({
+    name: "default",
+    title: "studio",
+    projectId: "kn4xk1pb",
+    dataset: "production",
+    plugins: [structureTool(), visionTool()],
+    basePath: "/studio",
+    schema: {
+        types: schemaTypes
+    }
+})
+
+15. class-14-new/src/sanity/sanity.query.ts
+  import { groq } from "next-sanity";
+import sanityClient from "./sanity.client";
+
+export async function GetMovieData() {
+    return sanityClient.fetch(
+        groq`
+        *[_type=="movie"]{
+  name,
+    description,
+    "imageURL": thumbnail.asset->url
+}
+        `
+    )
+}
+16. class-14-new/src/sanity/schema/index.ts
+import { MovieSchema } from "./movie";
+import { MovieSchema2 } from "./movie-2";
+
+export const schemaTypes = [MovieSchema, MovieSchema2];
+17. class-14-new/src/sanity/schema/movie.ts
+export const MovieSchema = {
+    name: "movie",
+    title: "Movie",
+    type: "document",
+    fields: [
+        {
+            name: "name",
+            title: "Movie Name",
+            type: "string",
+        },
+        {
+            name: "description",
+            title: "Movie Description",
+            type: "string",
+        },
+        {
+            name: "thumbnail",
+            title: "Movie Thumbnail",
+            type: "image",
+        },
+    ]
+}
+
+
+
+
+
+
+18. class-14-new/src/app/studio/[[...index]]/page.tsx
+"use client"
+import { SanityConfig } from "@/sanity/sanity.config"
+import { NextStudio } from "next-sanity/studio"
+
+export default function SanityStudio(){
+    return (<NextStudio config={SanityConfig} />)
+}
