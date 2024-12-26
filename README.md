@@ -35,7 +35,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 1. Create folder in lower case
-2. Generate Next js file
+2. Generate Next js file<br/>
 npx create-next-app@14 .
 add " ." for not create a project folder
 3. Install Github CLI 
