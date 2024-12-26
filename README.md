@@ -34,27 +34,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-1. Create folder in lower case
+
+<br/>
+1. Create folder in lower case  <br/>
 2. Generate Next js file<br/>
-npx create-next-app@14 .
-add " ." for not create a project folder
-3. Install Github CLI 
-https://cli.github.com/
-4. GitHub CLI Login
-gh auth login
-5. Rename Local Branch
-git branch -m master main
-6. create repo
-git init
-git add .
-git commit -m "Initial commit"
-gh repo create
-7. git push -u origin main
-8. diploy on vercel
-9. install shad cn and Button
-npx shadcn@latest init
-npx shadcn@latest add button
-10. push on github
-11. Run 3 comand for sanity
-npm i sanity next-sanity @sanity/vision
-12. push on github
+npx create-next-app@14 .<br/>
+add " ." for not create a project folder<br/>
+3. Install Github CLI <br/>
+https://cli.github.com/ <br/>
+4. GitHub CLI Login <br/>
+gh auth login <br/>
+5. Rename Local Branch <br/>
+git branch -m master main <br/>
+6. create repo <br/>
+git init <br/>
+git add . <br/>
+git commit -m "Initial commit" <br/>
+gh repo create <br/>
+7. git push -u origin main <br/>
+8. diploy on vercel <br/>
+9. install shad cn and Button <br/>
+npx shadcn@latest init <br/>
+npx shadcn@latest add button <br/>
+10. push on github <br/>
+11. Run 3 comand for sanity <br/>
+npm i sanity next-sanity @sanity/vision <br/>
+12. push on github <br/>
