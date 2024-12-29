@@ -64,7 +64,7 @@ npm i sanity next-sanity @sanity/vision <br/>
  import { createClient, type ClientConfig } from "next-sanity";
 
 const SanityClient: ClientConfig = {
-    projectId: "kn4xk1pb",
+    projectId: "wso1i2g4",
     dataset: "production",
     apiVersion: "2024-12-22",
     useCdn: false
@@ -80,7 +80,7 @@ import { schemaTypes } from "./schema";
 export const SanityConfig = defineConfig({
     name: "default",
     title: "studio",
-    projectId: "kn4xk1pb",
+    projectId: "wso1i2g4",
     dataset: "production",
     plugins: [structureTool(), visionTool()],
     basePath: "/studio",
@@ -146,3 +146,4 @@ import { NextStudio } from "next-sanity/studio"
 export default function SanityStudio(){
     return (<NextStudio config={SanityConfig} />)
 }
+19. push on github
