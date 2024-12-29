@@ -1,8 +1,8 @@
 import { groq } from "next-sanity";
-import { SanityClient } from "sanity";
+import sanityClient from "./sanity.client";
 
 export async function GetMovieData(){
-    return SanityClient.tetch(
+    return sanityClient.fetch(
         groq`
         *[_type=="movie"]{
         name,

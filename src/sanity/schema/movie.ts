@@ -9,14 +9,14 @@ export const MovieSchema = {
             type: "string",
         },
         {
-            name:"discription", 
+            name:"description", 
             title: "Movie Description",
             type: "string",
         },
         {
             name: "thumbnail", 
             title: "Movie Thumbnail",
-            type: "imagee"
+            type: "image"
         },
     ]
 }
